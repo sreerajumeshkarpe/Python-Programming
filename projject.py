@@ -1,6 +1,5 @@
-import random
-
-words=(python, apple, rose, grapes, laptop, mouse)
+import random 
+words=['python','apple','rose','grapes','laptop','mouse']
 word=random.choice(words)
 
 letters = len(word)
@@ -9,15 +8,15 @@ timesGuessed = 0
 print("What word am I thinking of? You get 5 chances. ")
 print("The word is ", letters, "letters long")
 
-if word==python:
+if word=='python':
    print("coding language")
-elif word==apple:
+elif word=='apple':
    print("a red fruit")
-elif word==rose:
+elif word=='rose':
    print("a beautiful flower")
-elif word==grapes:
+elif word=='grapes':
    print("nashik is famous for this fruit")
-elif word==laptop:
+elif word=='laptop':
    print("portable computer is called")
 else:
    print("an input device")
@@ -38,4 +37,5 @@ print("The correct word was", word)
 print("Thank you for playing! Please press Enter to exit")
 
     
+
 
