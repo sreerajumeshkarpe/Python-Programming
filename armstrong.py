@@ -1,3 +1,5 @@
+#NAME:SREERAJ KARPE ROLL NO:28 DIV:M
+#ARMSTRONG NUMER
 def Arm(x):
    t=x
    sum1=0
