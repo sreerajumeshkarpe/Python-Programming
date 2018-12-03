@@ -1,3 +1,6 @@
+#NAME:SREERAJ KARPE ROLL NO:28 DIV:M
+#fibonaci
+def Arm(x):
 def fibonaci(n):
    a=0
    b=1
