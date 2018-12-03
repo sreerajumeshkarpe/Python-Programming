@@ -1,290 +1,169 @@
+#E-COMMERCE WEBSITE
+#SREERAJ UMESH KARPE
+#DIV-M,ROLL NO-28
+
+
 from easygui import *
 import sys
-sum=0
-list=[]
 while 1:
-    msgbox("WELCOME !!!")
-    msg ="Which site do you prefer?"
-    title = "Online Shopping"
-    choices = ["Amazon", "Flipkart", "Snapdeal", "Myntra"]
+    msgbox("Hello, coustomer!")
+    msg ="from which site do you want to purchase?"
+    title = "shopping"
+    choices = ["amazon", "flipkart"]
     choice = choicebox(msg, title, choices)
+   # msgbox("You chose: " + str(choice), "Survey Result")
+    if choice=="amazon":
+        msg1 ="choose your preferrance"
+        title1 = "shopping"
+        choices1 = ["electronics","toys"]
+        choice1 = choicebox(msg, title1, choices1)
+       # msgbox("You chose: " + str(choice1), "Survey Result")
+        if choice1=="electronics":
+            msg ="choose your preferrance"
+            title2 = "shopping"
+            choices2 = ["mobiles","tv"]
+            choice2 = choicebox(msg, title2, choices2)
+           # msgbox("You chose: " + str(choice2), "Survey Result")
+            if choice2=="mobiles":
+                msg ="choose your preferrance"
+                title3 = "shopping"
+                choices3 = ["samsung"]
+                choice3 = choicebox(msg, title3, choices3)
+               # msgbox("You chose: " + str(choice3), "Survey Result")
+                if choice3=="samsung":
+                    msg ="choose your preferrance"
+                    title4 = "shopping"
+                    choices4 = ["j6"]
+                    choice4 = choicebox(msg, title4, choices4)
+                   # msgbox("You chose: " + str(choice4), "Survey Result")
+                    if choice4=="j6":
+                        msg ="choose your preferrance"
+                        title5 = "shopping"
+                        choices5 = ["N ELEC", "A ELEC"]
+                        choice5 = choicebox(msg, title5, choices5)
+                       # msgbox("You chose: " + str(choice5), "Survey Result")
+                        if choice5=="N ELEC":
+                           msgbox("You chose: " +str(choice5), "Rs.17000")
+                        else:                  
+                           msgbox("You chose: " +str(choice5), "Rs.17500")
+           
+            else:
+                msg ="choose your preferrance"
+                title8 = "shopping"
+                choices8 = ["onida","LG"]
+                choice8 = choicebox(msg, title8, choices8)
+               # msgbox("You chose: " + str(choice8), "Survey Result")
+                if choice8=="onida":
+                     msg ="choose your preferrance"
+                     title9 = "shopping"
+                     choices9 = ["E tv","F tv"]
+                     choice9 = choicebox(msg, title9, choices9)
+                    # msgbox("You chose: " + str(choice9), "Survey Result")
+                else:
+                   if choice9=="E tv":
+                      msgbox("You chose: " + str(choice9), "Rs.91500")
+                   else:
+                      msgbox("You chose: "+str(choice9), "Rs.71200")
+        else:
+            msg ="choose your preferrance"
+            title6 = "shopping"
+            choices6 = ["bike","robot"]
+            choice6 = choicebox(msg, title6, choices6)
+           # msgbox("You chose: " + str(choice6), "Survey Result")
+            if choice6=="bike":
+                msg ="choose your preferrance"
+                title7 = "shopping"
+                choices7 = ["C TOYS","D TOYS"]
+                choice7 = choicebox(msg, title7, choices7)
+               # msgbox("You chose: " + str(choice7), "Survey Result")
+                if choice7=="C TOYS":
+                      msgbox("You chose: " + str(choice7), "Rs.500")
+                else:
+                      msgbox("You chose: "+ str(choice7), "Rs.700")
+            else:
+                if choice7=="C TOYS":
+                      msgbox("You chose: " + str(choice7), "Rs.1500")
+                else:
+                      msgbox("You chose: "+ str(choice7), "Rs.1200")
+    elif choice=="flipkart":
+        msg1 ="choose your preferrance"
+        title1 = "shopping"
+        choices1 = ["electronics","toys"]
+        choice1 = choicebox(msg, title1, choices1)
+       # msgbox("You chose: " + str(choice1), "Survey Result")
+        if choice1=="electronics":
+            msg ="choose your preferrance"
+            title2 = "shopping"
+            choices2 = ["mobiles","tv"]
+            choice2 = choicebox(msg, title2, choices2)
+           # msgbox("You chose: " + str(choice2), "Survey Result")
+            if choice2=="mobiles":
+                msg ="choose your preferrance"
+                title3 = "shopping"
+                choices3 = ["samsung"]
+                choice3 = choicebox(msg, title3, choices3)
+               # msgbox("You chose: " + str(choice3), "Survey Result")
+                if choice3=="samsung":
+                    msg ="choose your preferrance"
+                    title4 = "shopping"
+                    choices4 = ["j6"]
+                    choice4 = choicebox(msg, title4, choices4)
+                   # msgbox("You chose: " + str(choice4), "Survey Result")
+                    if choice4=="j6":
+                        msg ="choose your preferrance"
+                        title5 = "shopping"
+                        choices5 = ["N ELEC", "A ELEC"]
+                        choice5 = choicebox(msg, title5, choices5)
+                       # msgbox("You chose: " + str(choice5), "Survey Result")
+                        if choice5=="N ELEC":
+                           msgbox("You chose: " +str(choice5), "Rs.17000")
+                        else:
+                           msgbox("You chose: " +str(choice5), "Rs.17500")
 
-    # note that we convert choice to string, in case
-    # the user cancelled the choice, and we got None.
-    
-    if choice=="Amazon":
-      msg="What do you want to buy?"
-      title="Shop items"
-      choices=["Electronics","Clothing","Furniture"]
-      choice = choicebox(msg, title, choices)
-      if choice=="Electronics":
-          msg="What do you want to buy?"
-          title="Shop electronics"
-          choices=["Dell","Lenovo","Apple"]
-          choice = choicebox(msg, title, choices)
-          if choice=="Dell":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="Lenovo":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-      elif choice=="Clothing":
-          msg="What do you want to buy?"
-          title="Shop clothing"
-          choices=["Forever 21","UCB","Zara"]
-          choice=choicebox(msg, title, choices)
-          if  choice=="Forever 21":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3000rs","vendor 2 4000rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="UCB":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3400rs","vendor 2 4800rs","vendor 3 3500rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3080rs","vendor 2 4009rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-      elif choice=="Furniture":
-          msg="What do you want to buy?"
-          title="Shop furniture"
-          choices=["Sofa","bed","table"]
-          choice=choicebox(msg, title, choices)
-          if choice=="sofa":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 32000rs","vendor 2 42000rs","vendor 3 30200rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="bed":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 34000rs","vendor 2 48000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30080rs","vendor 2 40009rs","vendor 3 30000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-    elif choice=="Flipkart":
-      msg="What do you want to buy?"
-      title="Shop items"
-      choices=["Electronics","Clothing","Furniture"]
-      choice = choicebox(msg, title, choices)
-      if choice=="Electronics":
-          msg="What do you want to buy?"
-          title="Shop electronics"
-          choices=["Dell","Lenovo","Apple"]
-          choice=choicebox(msg, title, choices)
-              if choice=="Dell":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="Lenovo":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-     elif choice=="Clothing":
-          msg="What do you want to buy?"
-          title="Shop clothing"
-          choices=["Forever 21","UCB","Zara"]
-          choice=choicebox(msg, title, choices)
-             if choice=="Forever 21":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3000rs","vendor 2 4000rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-              elif choice=="UCB":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3400rs","vendor 2 4800rs","vendor 3 3500rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3080rs","vendor 2 4009rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-      elif choice=="Furniture":
-          msg="What do you want to buy?"
-          title="Shop furniture"
-          choices=["Sofa","bed","table"]
-          choice=choicebox(msg, title, choices)
-          if choice=="sofa":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 32000rs","vendor 2 42000rs","vendor 3 30200rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="bed":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 34000rs","vendor 2 48000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30080rs","vendor 2 40009rs","vendor 3 30000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-   elif choice=="Snapdeal":
-      msg="What do you want to buy?"
-      title="Shop items"
-      choices=["Electronics","Clothing","Furniture"]
-      choice = choicebox(msg, title, choices)
-      if choice=="Electronics":
-          msg="What do you want to buy?"
-          title="Shop electronics"
-          choices=["Dell","Lenovo","Apple"]
-          choice=choicebox(msg, title, choices)
-          if choice=="Dell":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="Lenovo":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-      elif choice=="Clothing":
-          msg="What do you want to buy?"
-          title="Shop clothing"
-          choices=["Forever 21","UCB","Zara"]
-          choice=choicebox(msg, title, choices)
-          if choice=="Forever 21":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3000rs","vendor 2 4000rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="UCB":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3400rs","vendor 2 4800rs","vendor 3 3500rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3080rs","vendor 2 4009rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-      elif choice=="Furniture":
-          msg="What do you want to buy?"
-          title="Shop furniture"
-          choices=["Sofa","bed","table"]
-          choice=choicebox(msg, title, choices)
-          if choice=="sofa":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 32000rs","vendor 2 42000rs","vendor 3 30200rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="bed":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 34000rs","vendor 2 48000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30080rs","vendor 2 40009rs","vendor 3 30000rs"]
-              choice = choicebox(msg, title, choices)
-               list.append(choice)
-    elif choice=="Myntra":
-     msg="What do you want to buy?"
-      title="Shop items"
-      choices=["Electronics","Clothing","Furniture"]
-      choice = choicebox(msg, title, choices)
-      if choice=="Electronics":
-          msg="What do you want to buy?"
-          title="Shop electronics"
-          choices=["Dell","Lenovo","Apple"]
-          choice=choicebox(msg, title, choices)
-          if choice=="Dell":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          elif choice=="Lenovo":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 30000rs","vendor 2 40000rs","vendor 3 35000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-     elif choice=="Clothing":
-          msg="What do you want to buy?"
-          title="Shop clothing"
-          choices=["Forever 21","UCB","Zara"]
-          choice=choicebox(msg, title, choices)
-             if choice=="Forever 21":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3000rs","vendor 2 4000rs","vendor 3 3000rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-              elif choice=="UCB":
-              msg="Select vendor"
-              title="vendors"
-              choices=["vedor 1 3400rs","vendor 2 4800rs","vendor 3 3500rs"]
-              choice = choicebox(msg, title, choices)
-              list.append(choice)
-          else:
-              msg="Select vendor"
- 
-    msg = "Do you want to continue?"
-    title = "Please Confirm"
-    if ccbox(msg, title):     # show a Continue/Cancel dialog
-        pass 
-    else:
-         sys.exit(0)
+            else:
+                msg ="choose your preferrance"
+                title8 = "shopping"
+                choices8 = ["onida","LG"]
+                choice8 = choicebox(msg, title8, choices8)
+               # msgbox("You chose: " + str(choice8), "Survey Result")
+                if choice8=="onida":
+                     msg ="choose your preferrance"
+                     title9 = "shopping"
+                     choices9 = ["E tv","F tv"]
+                     choice9 = choicebox(msg, title9, choices9)
+                    # msgbox("You chose: " + str(choice9), "Survey Result")
+                else:
+                   if choice9=="E tv":
+                      msgbox("You chose: " + str(choice9), "Rs.91500")
+                   else:
+                      msgbox("You chose: "+str(choice9), "Rs.71200")
+
+        else:
+            msg ="choose your preferrance"
+            title6 = "shopping"
+            choices6 = ["bike","robot"]
+            choice6 = choicebox(msg, title6, choices6)
+           # msgbox("You chose: " + str(choice7), "Survey Result")
+            if choice6=="bike":
+                msg ="choose your preferrance"
+                title7 = "shopping"
+                choices7 = ["C TOYS","D TOYS"]
+                choice7 = choicebox(msg, title7, choices7)
+               # msgbox("You chose: " + str(choice7), "Survey Result")
+                if choice7=="C TOYS":
+                      msgbox("You chose: " + str(choice7), "Rs.500")
+                else:
+                      msgbox("You chose: "+str(choice7), "Rs.700")
+            else:
+                msg ="choose your preferrance"
+                title7 = "shopping"
+                choices7 = ["C robot","D robot"]
+                choice7 = choicebox(msg, title7, choices7)
+                if choice7=="C TOYS":
+                      msgbox("You chose: " + str(choice7), "Rs.1500")
+                else:
+                      msgbox("You chose: "+str(choice7), "Rs.1200")
+if ccbox(msg, title):     # show a Continue/Cancel dialog
+        pass  # user chose Continue
+else:
+        sys.exit(0)
